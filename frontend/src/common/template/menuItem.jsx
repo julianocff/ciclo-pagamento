@@ -1,7 +1,10 @@
 import React from 'react'
+import { Link } from 'react-router'
 
 export default props => (
-    <a href={props.path}>
-        <li className={`fa fa-${props.icon}`}>{props.label}</li>
-    </a>
+    <li>
+        <Link to={props.path}>
+            <i className={`fa fa-${props.icon}`}></i> <span>{props.label}</span>
+        </Link>
+    </li >
 )
